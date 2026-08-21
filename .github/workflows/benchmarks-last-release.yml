@@ -52,6 +52,8 @@ jobs:
           ASV_SKIP_SLOW: 1
           GITHUB_TAG: ${{ steps.previoustag.outputs.tag }}
         run: |
+          # Propagate failures from asv through the output-formatting pipeline.
+          set -euo pipefail
           set -x
           # ID this runner
           asv machine --yes

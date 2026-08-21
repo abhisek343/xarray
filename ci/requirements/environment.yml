@@ -36,6 +36,7 @@ dependencies:
   - pooch
   - pre-commit
   - pyarrow # pandas raises a deprecation warning without this, breaking doctests
+  - py-rattler
   - pydap
   - pytest
   - pytest-asyncio
